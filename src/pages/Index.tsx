@@ -65,7 +65,7 @@ const Index = () => {
             </div>
             <Button 
               className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
-              onClick={() => window.open('https://t.me/yourchannel', '_blank')}
+              onClick={() => window.open('https://t.me/motivaps', '_blank')}
             >
               <Icon name="Send" size={20} className="mr-2" />
               Telegram канал
