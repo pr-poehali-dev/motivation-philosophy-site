@@ -147,9 +147,13 @@ const Index = () => {
         <Separator className="my-8" />
 
         {activeSection === 'quotes' && (
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 animate-scale-in">
-            {filteredQuotes.map((quote) => (
-              <Card key={quote.id} className="hover:shadow-lg transition-all hover:scale-105">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {filteredQuotes.map((quote, index) => (
+              <Card 
+                key={quote.id} 
+                className="hover:shadow-lg transition-all hover:scale-105 animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
                 <CardContent className="p-6">
                   <Icon name="Quote" size={32} className="text-accent mb-4" />
                   <p className="text-lg italic mb-4 text-foreground leading-relaxed">
@@ -168,9 +172,13 @@ const Index = () => {
         )}
 
         {activeSection === 'philosophers' && (
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 animate-scale-in">
-            {filteredPhilosophers.map((phil) => (
-              <Card key={phil.id} className="hover:shadow-lg transition-all hover:scale-105">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {filteredPhilosophers.map((phil, index) => (
+              <Card 
+                key={phil.id} 
+                className="hover:shadow-lg transition-all hover:scale-105 animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
                 <CardContent className="p-6">
                   <Icon name="User" size={40} className="text-accent mb-4" />
                   <h3 className="font-heading text-2xl font-bold text-primary mb-3">{phil.name}</h3>
@@ -184,9 +192,13 @@ const Index = () => {
         )}
 
         {activeSection === 'stories' && (
-          <div className="space-y-6 animate-scale-in">
-            {filteredStories.map((story) => (
-              <Card key={story.id} className="hover:shadow-lg transition-all">
+          <div className="space-y-6">
+            {filteredStories.map((story, index) => (
+              <Card 
+                key={story.id} 
+                className="hover:shadow-lg transition-all animate-fade-in"
+                style={{ animationDelay: `${index * 0.15}s` }}
+              >
                 <CardContent className="p-8">
                   <div className="flex items-start gap-4 mb-4">
                     <Icon name="BookOpen" size={32} className="text-accent mt-1" />
